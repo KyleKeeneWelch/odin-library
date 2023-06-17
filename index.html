@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/35e096853f.js" crossorigin="anonymous"></script>
+    <title>The Odin Project - Library</title>
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+    </header>
+    <main class="main-container">
+        <div class="btn">
+            <button id="btn-add-book">Add Book</button>
+        </div>
+        <br>
+        <div class="book-grid" id="book-grid">
+            <h3>No Books Avaliable! Click the "Add Book" button to add a book!</h3>
+        </div>
+    </main>
+    <footer>
+        <p>Kyle Keene-Welch © 2023</p>
+        <a href="https://github.com/KyleKeeneWelch"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </footer>
+    <div class="modal" id="book-modal">
+        <form class="book-form" id="book-form" action="#" novalidate autocomplete="off">
+            <p>Add New Book</p>
+            <br>
+            <div>
+                <label for="title">Title</label>
+                <br>
+                <input type="text" id="title" name="title" minlength="3" maxlength="200" required placeholder="Harry Potter..." autocomplete="off">
+                <br>
+                <span id="title-error" class="error" aria-live="polite"></span>
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <br>
+                <input type="text" id="author" name="author" minlength="3" maxlength="50" required placeholder="J.K. Rowling..." autocomplete="off">
+                <br>
+                <span id="author-error" class="error" aria-live="polite"></span>
+            </div>
+            <div>
+                <label for="pages">Pages</label><br>
+                <input type="number" id="pages" name="pages" min="10" max="10000" required placeholder="223..." autocomplete="off">
+                <br>
+                <span id="pages-error" class="error" aria-live="polite"></span>
+            </div>
+            <div>
+                <label for="have-read">Have you read it?</label>
+                <input type="checkbox" id="have-read" name="have-read">
+                <br>
+            </div>
+            <span id="have-read-error" class="error" aria-live="polite"></span>
+            <div class="btn">
+                <button>Create Book</button>
+            </div>
+        </form>
+    </div>
+    <div class="overlay" id="overlay"></div>
+</body>
+</html>
